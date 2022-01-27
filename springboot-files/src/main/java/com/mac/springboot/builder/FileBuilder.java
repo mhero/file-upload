@@ -1,6 +1,7 @@
 package com.mac.springboot.builder;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -56,20 +57,24 @@ public class FileBuilder {
 		return attributes;
 	}
 
-	private static File mutipartToFile(MultipartFile file) {
+	private static File mutipartToFile(MultipartFile multipart) {
 
-		File convFile = null;
+		File file = new File(multipart.getOriginalFilename());
 		try {
-			convFile = new File(file.getOriginalFilename());
-			convFile.createNewFile();
-			FileOutputStream fos = new FileOutputStream(convFile);
-			fos.write(file.getBytes());
-			fos.close();
+			file.createNewFile();
+			copyToFile(multipart, file);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		return convFile;
+		return file;
+
+	}
+
+	private static void copyToFile(MultipartFile multipart, File file) throws IOException {
+		FileOutputStream fos = new FileOutputStream(file);
+		fos.write(multipart.getBytes());
+		fos.close();
 
 	}
 
