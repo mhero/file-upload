@@ -1,0 +1,84 @@
+body {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 90%;
+    /*border: 1px solid rgba(0, 0, 0, 0.125);*/
+    padding: 8px;
+    margin: 20px;
+}
+
+.title {
+    width: 98.7%;
+    /*border: 1px solid rgba(0, 0, 0, 0.125);*/
+    padding: 8px;
+}
+
+.element {
+    padding: 10px;
+}
+
+.hr {
+    width: 100%;
+}
+
+.ok {
+    color: blue;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: #008CBA;
+}
+
+/* Blue */
+
+.button3 {
+    background-color: #f44336;
+}
+
+/* Red */
+
+.button4 {
+    background-color: #e7e7e7;
+    color: black;
+}
+
+/* Gray */
+
+.button5 {
+    background-color: #555555;
+}
+
+/* Black */

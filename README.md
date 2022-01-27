@@ -1,2 +1,19 @@
-# file-upload
-File uploader using Java(Spring Boot) and React
+# file uploader (springboot +  react)
+- Springboot rest file uploader
+  - H2 database
+  - Endpoints
+    - document/upload
+    - document/download
+  - CORS enabled for http://localhost:3333
+  - file size 10MB max
+  - run on port 8080
+  - curl request
+    - curl -F "file=@/folder/file.txt"   http://localhost:8080/document/upload
+- React client file uploader
+  - react simple file client
+  - axios lib for requests
+  - to run
+    - enter react-files folder
+    - npm install
+    - npm start
+    - will run on port 3333
